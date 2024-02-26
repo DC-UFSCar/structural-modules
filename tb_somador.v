@@ -35,6 +35,5 @@ module tb_somador;
     a = 9;
     b = 8;
     #1;
-    $finish;
-  end;
+  end
 endmodule
