@@ -1,8 +1,8 @@
-iverilog -o tb_somador tb_somador.v somador.v
-./tb_somador > somador.out
+iverilog -o tb *.v
+./tb > test/saida.out
 # diff somador.out somador.ok
 
-if diff somador.out somador.ok >/dev/null; then
+if diff test/saida.out test/saida.ok >/dev/null; then
     echo "OK"
     exit 0
 else

@@ -1,4 +1,4 @@
-module tb_somador;
+module tb;
 
   reg [3:0] a, b; // registradores auxiliares a e b 
   wire [3:0] soma; // sinal extra para coletar o resultado
