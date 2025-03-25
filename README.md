@@ -10,3 +10,7 @@ Implemente no arquivo `vector.v` as saídas conforme solicitado:
 |`b_reduction_or`|***or*** entre os bits de `b`|
 |`not_a_not_b`|`a` ***not*** bit-a-bit contatenado com `b` ***not*** bit-a-bit
 
+# Referências
+
+- https://hdlbits.01xz.net/wiki/Vectorgates
+- https://hdlbits.01xz.net/wiki/Gates4
