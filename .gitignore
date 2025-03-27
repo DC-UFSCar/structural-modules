@@ -1,2 +1,2 @@
 tests/*.out
-tests/tb
+tests/tb*
