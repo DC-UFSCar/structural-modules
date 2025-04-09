@@ -1,16 +1,18 @@
-# Vetores e sua operações 
+# Verilog estrutural, instanciando e conectando módulos
 
-Implemente no arquivo `vector.v` as saídas conforme solicitado:
+Implemente o circuito no arquivo `top.v` conforme a figura a abaixo e as instruções a seguir:
 
-| Saída | Resultado |
-|   ---:| :---      |
-|`a_bitwise_or_b`|`a` ***and*** bit-a-bit com `b`|
-|`a_logical_or_b`|`a` ***and*** lógico com `b`|
-|`a_reduction_or`|***or*** entre os bits de `a`|
-|`b_reduction_or`|***or*** entre os bits de `b`|
-|`not_a_not_b`|`a` ***not*** bit-a-bit contatenado com `b` ***not*** bit-a-bit
+![Circuito desejado](mods.png)
+
+- Use os mesmos nomes para os fios, pois isso é importante para que o teste seja bem sucedido. 
+- Observe os módulos `ma` e `mb` instanciados duas vezes cada um deles:
+    - Faça as ligações **por posição** quando eles forem totalmente conectados (`ib1` e `ia2`);
+    - Faça as ligações **por nome** quando eles tiverem portas desconectadas (`ia1` e `ib2`);
+    - Use as **primitivas básicas** da linguagem Verilog ao invés `assign` para gerar as portas `and`, `or` e `xor` que aparecem no circuito.
+
 
 # Referências
 
-- https://hdlbits.01xz.net/wiki/Vectorgates
-- https://hdlbits.01xz.net/wiki/Gates4
+- https://hdlbits.01xz.net/wiki/Module
+- https://hdlbits.01xz.net/wiki/Mt2015_q4
+- https://www.chipverify.com/verilog/verilog-net-types

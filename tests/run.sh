@@ -1,12 +1,21 @@
 cd tests
-iverilog -o tb tb_vector.v ../vector.v
-rm -f vector.out
-./tb > vector.out
+iverilog -o tb tb.v ../*.v
+rm -f top.out
+./tb > top.out
 
-if diff vector.out vector.ok >/dev/null; then
-    echo "OK"
-    exit 0
-else
-    echo "ERRO"
+if grep -qw "assign" ../top.v; then
+    echo "ERRO: usar as primitivas básicas and, or e xor ou invés de assign"
     exit 1
+else
+    if diff top.out top.ok >/dev/null; then
+        echo "OK"
+        exit 0
+    else
+        echo "ERRO: saída incorreta"
+        echo "ESPERADA:"
+        cat top.ok
+        echo "OBTIDA:"
+        cat top.out
+        exit 1
+    fi
 fi
